@@ -14,8 +14,6 @@ def die_roll(hash)
   end
 }
 arr.flatten!
-puts arr
-
   return arr[rand(arr.size)]
 end
 
@@ -32,5 +30,5 @@ while true
   end
   puts (@statime+time).strftime("Move on to something new at %I:%M %p")
   puts "--------------------"
-  sleep(@statime+time)
+  sleep(time)
 end
