@@ -1,0 +1,20 @@
+#Mark your tasks, how many hours you want to spend on them, and their weights.  Weights and times are only tested on positive integers right now.
+
+
+Matz Translation:
+SICP-LISP:
+  time: 2
+  weight: 300
+Practical Ruby Projects:
+  time: 2
+Project(Firefox Extension):
+  weight: 4
+Project(BotP):
+  time: 2
+Project(Ronin Kanji):
+  time: 2
+Stuff around house:
+  time: 2
+Exercise:  
+  time: 2
+
