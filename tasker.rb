@@ -32,5 +32,5 @@ while true
   end
   puts (@statime+time).strftime("Move on to something new at %I:%M %p")
   puts "--------------------"
-  sleep(1)
+  sleep(@statime+time)
 end
