@@ -1,5 +1,6 @@
 require 'numtime'
 require 'yaml'
+require 'nil_helper'
 hash = File.open( 'tasks.yml' ) { |yf| YAML::load( yf ) }
 
 def die_roll(hash)
@@ -16,7 +17,6 @@ def die_roll(hash)
 arr.flatten!
   return arr[rand(arr.size)]
 end
-
 while true
   @statime = Time.now
   puts "--------------------"
@@ -24,12 +24,13 @@ while true
   print "You started #{key} at"
   puts @statime.strftime(" %I:%M %p")
 
-  if hash[key] and hash[key]['time'] then
-    time = hash[key]['time'].to_i.hours  
-  else
-    time = 1.hour
-  end
+  time = (hash[key]['time']).pull_time 
+  puts hash
+  puts key 
+  puts hash[key]
+  puts hash[key]['time']
+  puts time
   puts (@statime+time).strftime("Move on to something new at %I:%M %p")
   puts "--------------------"
-  sleep(time)
+  sleep(1)
 end
