@@ -1,5 +1,5 @@
-require 'numtime'
 require 'yaml'
+require 'num_helper'
 require 'nil_helper'
 hash = File.open( 'tasks.yml' ) { |yf| YAML::load( yf ) }
 
