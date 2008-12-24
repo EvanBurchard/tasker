@@ -25,12 +25,7 @@ while true
   puts @statime.strftime(" %I:%M %p")
 
   time = (hash[key]['time']).pull_time 
-  puts hash
-  puts key 
-  puts hash[key]
-  puts hash[key]['time']
-  puts time
   puts (@statime+time).strftime("Move on to something new at %I:%M %p")
   puts "--------------------"
-  sleep(1)
+  sleep(time)
 end
