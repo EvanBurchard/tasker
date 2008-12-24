@@ -1,4 +1,4 @@
-require 'timer'
+require 'numtime'
 require 'yaml'
 hash = File.open( 'tasks.yml' ) { |yf| YAML::load( yf ) }
 
@@ -18,6 +18,7 @@ arr.flatten!
 end
 
 while true
+  @statime = Time.now
   puts "--------------------"
   key = die_roll(hash)
   print "You started #{key} at"
