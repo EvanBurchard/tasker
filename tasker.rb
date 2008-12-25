@@ -17,6 +17,8 @@ def die_roll(hash)
 arr.flatten!
   return arr[rand(arr.size)]
 end
+
+
 while true
   @statime = Time.now
   puts "--------------------"
