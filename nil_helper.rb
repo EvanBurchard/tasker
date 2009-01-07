@@ -6,6 +6,6 @@ def nil.pull_time
   return 1.hour
 end
 
-def nil.times
-  
+def nil.times(&block)
+  1.times(&block)
 end
